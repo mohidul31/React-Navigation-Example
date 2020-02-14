@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { AppLoading } from "expo";
-import { Container, Text } from "native-base";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
+import HomeDrawerNavigator from "./src/navigator/HomeDrawerNavigator";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,11 +27,7 @@ export default class App extends React.Component {
       return <AppLoading />;
     }
 
-    return (
-      <Container style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </Container>
-    );
+    return <HomeDrawerNavigator />;
   }
 }
 
