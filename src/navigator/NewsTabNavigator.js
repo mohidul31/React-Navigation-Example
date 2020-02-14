@@ -28,7 +28,7 @@ const newsTabs = createBottomTabNavigator(
               active={props.navigation.state.index === 0}
               onPress={() => props.navigation.navigate("TechNews")}
             >
-              <Icon name="bowtie" />
+              <Icon name="home" type="FontAwesome" />
               <Text>Tech News</Text>
             </Button>
             <Button
@@ -36,7 +36,7 @@ const newsTabs = createBottomTabNavigator(
               active={props.navigation.state.index === 1}
               onPress={() => props.navigation.navigate("SportsNews")}
             >
-              <Icon name="briefcase" />
+              <Icon name="gamepad" type="FontAwesome" />
               <Text>Sports News</Text>
             </Button>
           </FooterTab>

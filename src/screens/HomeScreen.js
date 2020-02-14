@@ -11,7 +11,9 @@ import {
   Title,
   Left,
   Icon,
-  Right
+  Right,
+  Footer,
+  FooterTab
 } from "native-base";
 
 export default class HomeScreen extends Component {
@@ -28,7 +30,7 @@ export default class HomeScreen extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>HomeScreen</Title>
+            <Title>Home</Title>
           </Body>
           <Right />
         </Header>
@@ -36,7 +38,7 @@ export default class HomeScreen extends Component {
           <Card>
             <CardItem>
               <Body>
-                <Text>Chat App to talk some awesome people!</Text>
+                <Text>Welcome to Home Screen</Text>
               </Body>
             </CardItem>
           </Card>
@@ -45,20 +47,18 @@ export default class HomeScreen extends Component {
             rounded
             dark
             style={{ marginTop: 10 }}
-            onPress={() => this.props.navigation.navigate("News")}
+            onPress={() => this.props.navigation.navigate("NewsTabNavigator")}
           >
-            <Text>News</Text>
-          </Button>
-          <Button
-            full
-            rounded
-            primary
-            style={{ marginTop: 10 }}
-            onPress={() => this.props.navigation.navigate("Profile")}
-          >
-            <Text>Goto Profiles</Text>
+            <Text>Goto News</Text>
           </Button>
         </Content>
+        <Footer>
+          <FooterTab>
+            <Button full>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }

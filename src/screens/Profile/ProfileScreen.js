@@ -17,10 +17,6 @@ import {
   H1
 } from "native-base";
 
-import { StackNavigator } from "react-navigation";
-import EditScreenOne from "./EditScreenOne.js";
-import EditScreenTwo from "./EditScreenTwo.js";
-
 export default class Profile extends Component {
   componentDidMount() {
     if (this.props.navigation.state.params !== undefined) {

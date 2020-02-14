@@ -45,27 +45,13 @@ export default class SportsNewsScreen extends Component {
           <Right />
         </Header>
         <Content padder>
-          <Item floatingLabel style={{ marginTop: 20 }}>
-            <Label>Sports News</Label>
-            <Input />
-          </Item>
-          <Button
-            rounded
-            success
-            style={{ marginTop: 20, alignSelf: "center" }}
-            onPress={() => {
-              const navigationAction = NavigationActions.navigate({
-                routeName: "ProfileScreen", // <==== this is Profile tabNavigator
-                action: NavigationActions.navigate({
-                  routeName: "Profile", // <===== this is defaultScreen for Porfile
-                  params: { name: "JADE" }
-                })
-              });
-              this.props.navigation.dispatch(navigationAction);
-            }}
-          >
-            <Text>Goto Nine Profile</Text>
-          </Button>
+          <Card>
+            <CardItem>
+              <Body>
+                <Text>Welcome to Sports News Screen</Text>
+              </Body>
+            </CardItem>
+          </Card>
         </Content>
       </Container>
     );

@@ -7,15 +7,14 @@ import {
   List,
   ListItem,
   Content,
-  Icon
 } from "native-base";
-const routes = ["Home", "News", "Profile"];
+const routes = ["Home", "NewsTabNavigator", "ProfileStackNavigator"];
 export default class SideBarLayout extends Component {
   render() {
     return (
       <Container>
         <Content>
-          {/* <Image
+           <Image
             source={{
               uri:
                 "https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/drawer-cover.png"
@@ -27,34 +26,26 @@ export default class SideBarLayout extends Component {
               position: "absolute"
             }}
           />
-          <Image
-            square
-            style={{
-              height: 80,
-              width: 70,
-              position: "absolute",
-              alignSelf: "center",
-              top: 20
-            }}
-            source={{
-              uri:
-                "https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/logo.png"
-            }}
-          /> */}
-          <List
-            dataArray={routes}
-            contentContainerStyle={{ marginTop: 120 }}
-            renderRow={data => {
-              return (
-                <ListItem
-                  button
-                  onPress={() => this.props.navigation.navigate(data)}
-                >
-                  <Text>{data}</Text>
-                </ListItem>
-              );
-            }}
-          />
+          <List style={{marginTop:120}}>
+            <ListItem
+              button
+              onPress={() => this.props.navigation.navigate("Home")}
+            >
+              <Text>Home</Text>
+            </ListItem>
+            <ListItem
+              button
+              onPress={() => this.props.navigation.navigate("NewsTabNavigator")}
+            >
+              <Text>News</Text>
+            </ListItem>
+            <ListItem
+              button
+              onPress={() => this.props.navigation.navigate("ProfileStackNavigator")}
+            >
+              <Text>Profile</Text>
+            </ListItem>
+          </List>
         </Content>
       </Container>
     );

@@ -9,8 +9,8 @@ import ProfileStackNavigator from "./ProfileStackNavigator";
 const drawer = createDrawerNavigator(
   {
     Home: { screen: HomeScreen },
-    News: { screen: NewsTabNavigator },
-    Profile: { screen: ProfileStackNavigator }
+    NewsTabNavigator: { screen: NewsTabNavigator },
+    ProfileStackNavigator: { screen: ProfileStackNavigator }
   },
   {
     contentComponent: props => <SideBarLayout {...props} />
