@@ -11,7 +11,7 @@ import {
   Left,
   Right,
   Icon,
-  Title,
+  Title
 } from "native-base";
 
 export default class SportsNewsScreen extends Component {

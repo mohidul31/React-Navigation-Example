@@ -12,28 +12,24 @@ import {
   Right,
   Icon,
   Title,
-  Button,
+  Button
 } from "native-base";
 
 export default class EditScreenTwo extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    header: () => (
-      <Header>
-        <Left>
-          <Button transparent onPress={() => navigation.goBack()}>
-            <Icon name="arrow-back" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>EditScreenTwo</Title>
-        </Body>
-        <Right />
-      </Header>
-    )
-  });
   render() {
     return (
       <Container>
+        <Header>
+          <Left>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
+              <Icon name="arrow-back" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>EditScreenTwo</Title>
+          </Body>
+          <Right />
+        </Header>
         <Content padder>
           <Card>
             <CardItem>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Alert } from "react-native";
 
 import {
   Text,
@@ -13,18 +12,27 @@ import {
   Right,
   Icon,
   Title,
-  Button,
+  Button
 } from "native-base";
 
 export default class Profile extends Component {
-  componentDidMount() {
-    if (this.props.navigation.state.params !== undefined) {
-      Alert.alert("USER found", this.props.navigation.state.params.name);
-    }
-  }
   render() {
     return (
       <Container>
+        <Header>
+          <Left>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.openDrawer()}
+            >
+              <Icon name="menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Profile</Title>
+          </Body>
+          <Right />
+        </Header>
         <Content padder>
           <Card>
             <CardItem>
@@ -49,20 +57,3 @@ export default class Profile extends Component {
     );
   }
 }
-Profile.navigationOptions = ({ navigation }) => {
-  return {
-    header:() => (
-      <Header>
-        <Left>
-          <Button transparent onPress={() => navigation.openDrawer()}>
-            <Icon name="menu" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>Profile</Title>
-        </Body>
-        <Right />
-      </Header>
-    )
-  };
-};
