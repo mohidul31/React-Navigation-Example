@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { AppRegistry, View, StatusBar } from "react-native";
-import { NavigationActions } from "react-navigation";
 import {
   Button,
   Text,
@@ -14,16 +12,7 @@ import {
   Right,
   Icon,
   Title,
-  Input,
-  InputGroup,
-  Item,
-  Tab,
-  Tabs,
-  Footer,
-  FooterTab,
-  Label
 } from "native-base";
-import HomeScreen from "../HomeScreen";
 
 export default class TechNewsScreen extends Component {
   render() {

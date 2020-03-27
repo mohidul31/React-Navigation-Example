@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AppRegistry, Alert } from "react-native";
+import { Alert } from "react-native";
 
 import {
   Text,
@@ -14,7 +14,6 @@ import {
   Icon,
   Title,
   Button,
-  H1
 } from "native-base";
 
 export default class Profile extends Component {
