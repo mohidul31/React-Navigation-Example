@@ -1,41 +1,8 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { AppLoading } from "expo";
-import * as Font from "expo-font";
-import { Ionicons } from "@expo/vector-icons";
+import React, { Component } from 'react';
 import HomeDrawerNavigator from "./src/navigator/HomeDrawerNavigator";
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isReady: false
-    };
-  }
-
-  async componentDidMount() {
-    await Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      ...Ionicons.font
-    });
-    this.setState({ isReady: true });
-  }
-
+export default class App extends Component {
   render() {
-    if (!this.state.isReady) {
-      return <AppLoading />;
-    }
-
     return <HomeDrawerNavigator />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
